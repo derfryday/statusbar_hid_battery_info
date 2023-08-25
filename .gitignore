@@ -1,0 +1,14 @@
+.venv
+.idea
+/dist/
+src/statusbar_hid_battery_info/__pycache__
+dev.derfryday.statusbar-hid-batt-info_tmp.plist
+dev.derfryday.statusbar-hid-batt-info.plist
+StatusbarHIDBattInfo.app
+StatusbarHIDBattInfo
+_CodeSignature
+Info.plist
+app.app
+app.build
+app.dist
+app.onefile-build
