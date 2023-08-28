@@ -1,26 +1,23 @@
 [tool.poetry]
-name = "statusbar-hid-batt-info"
+name = "statusbar-hid-battery-info"
 version = "0.1.0"
-description = "HID battery info and notifier for MacOS statusbar"
+description = "Bluetooth HID battery indicator and notifier"
 authors = ["derfryday <contact@fryday.dev>"]
-include = ["statusbar_hid_battery_info_app.py"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.11"
 rumps = "^0.4.0"
-nuitka = "^1.7.10"
 orjson = "^3.9.5"
+requests = "^2.31.0"
+macos-notifications = "^0.1.6"
+
+[tool.poetry.group.dev.dependencies]
+nuitka = "^1.7.10"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.0"
 
-[tool.poetry.scripts]
-statusbar_hid_batt_info = "statusbar_hid_battery_info_app:main"
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[virtualenvs]
-create = true
-in-project = true

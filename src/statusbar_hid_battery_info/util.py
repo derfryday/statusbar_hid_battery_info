@@ -1,13 +1,13 @@
+import os
 import subprocess
 from typing import Any
-from typing import Optional
 
-from statusbar_hid_battery_info.app import Device
+from statusbar_hid_battery_info.device import Device
 
 
 class Util:
     @staticmethod
-    def extract_battery_info(input_data: str, device_name: str) -> Optional[int]:
+    def extract_battery_info(input_data: str, device_name: str) -> int | None:
         find_battery_level: bool = False
         for line in input_data.split("\n"):
             if "\"Product\"" in line and device_name in line:
@@ -48,3 +48,7 @@ class Util:
         output = subprocess.check_output(command.split(" ")).decode("utf-8")
 
         return output
+
+    @staticmethod
+    def send_notification(title: str, subtitle: str, message: str):
+        os.system(f"osascript -e 'display notification \"{message}\" with title \"{title}\" subtitle \"{subtitle}\"'")

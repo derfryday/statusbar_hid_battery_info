@@ -1,5 +1,6 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
-from typing import Optional
 
 
 @dataclass
@@ -9,7 +10,7 @@ class Device:
     product_id: int
     product_name: str
     has_battery: bool = False
-    device_address: Optional[str] = None
+    device_address: str | None = None
 
     def __repr__(self) -> str:
         return f"{self.product_name}.{self.device_address}"
