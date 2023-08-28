@@ -8,7 +8,7 @@ import subprocess
 
 class LaunchAgent:
     template_file_name: Final[str] = "statusbar_hid_batt_info.plist"
-    agent_name: Final[str] = "dev.derfryday.statusbar-hid-batt-info.plist"
+    agent_name: Final[str] = "dev.derfryday.statusbar-hid-batt-info"
 
     @staticmethod
     def create_launchd_file():

@@ -3,8 +3,8 @@ import sys
 from argparse import ArgumentParser
 from pathlib import Path
 
-from statusbar_hid_battery_info import ConfigFile
 from statusbar_hid_battery_info import StatusbarHIDBattInfo
+from statusbar_hid_battery_info.config import ConfigFile
 from statusbar_hid_battery_info.agent import LaunchAgent
 from statusbar_hid_battery_info.device import Device
 from statusbar_hid_battery_info.util import Util
@@ -27,9 +27,8 @@ def main() -> None:
     config_path = Path.home() / ".config/statusbar_hid_batt_info.json"
 
     if args.run_setup:
-        logging.info("Starting Setup wizard...")
+        logging.info("Creating default config...")
         ConfigFile.create_default_config()
-        LaunchAgent.create_launchd_file()
         sys.exit(0)
     elif args.install:
         logging.info("Installing StatusbarHIDBattInfo...")
