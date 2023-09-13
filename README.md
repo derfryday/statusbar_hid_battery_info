@@ -1,6 +1,6 @@
 # What is this and why?
 #### What is it?: 
-This is a daemon that display the battery level of your bluetooth HID devices and notifies you when the battery level is low.
+This is a daemon that displays the battery level of your bluetooth HID devices and notifies you when the battery level is low.
 The level at which you get notified can be configured in the config file.
 
 #### Okay, but why?:
